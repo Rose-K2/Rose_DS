@@ -17,14 +17,37 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
   background-image: url('images/BearSideBar.png');
   min-height: 100%;
 }
+@media only screen and (max-width: 600px) {
+  .bgimg {
+    background-size: contain;
+    background-position: top;
+    min-height: 200px; /* Adjust as needed for height */
+  }
+  .w3-sidebar {
+    display: none; /* Hide sidebar on small screens */
+  }
+  .top-bar {
+    display: block;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .top-bar {
+    display: none;
+  }
+}
 </style>
 </head>
 <body>
 
-<!-- Sidebar with image -->
+<!-- Sidebar with image for larger screens -->
 <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:30%">
   <div class="bgimg"></div>
 </nav>
+
+<!-- Top bar with image for mobile screens -->
+<div class="top-bar w3-hide-large">
+  <div class="bgimg"></div>
+</div>
 
 <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
 <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
@@ -43,7 +66,7 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
 <div class="w3-main w3-padding-large" style="margin-left:30%">
 
   <!-- Menu icon to open sidebar -->
-  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black w3-hide-large" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
   <!-- Header -->
   <header class="w3-container w3-center" style="padding:128px 16px" id="home">
@@ -121,121 +144,4 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
       </div>
     </div>
 
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Download Resume
-    </button>
-
-    <!-- Testimonials -->
-    <h3 class="w3-padding-24">My Reputation</h3>
-    <img src="images/BlondeFemale.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-text-black w3-margin-right">Hayley Morgan</span> Public health Consultant</p>
-    <p>I just wanted to acknowledge your work on the Boater Survey.  The PH team have really enjoyed working with you, bringing to life the numbers, to produce an amazing PowerBI tool to showcase and present the results.  It truly is an awesome product and will go some way to further raise awareness about this seldom heard community and get conversations started. Your professional approach, coupled with enthusiasm and a thirst to want to know more have ensured this product is authentic!  Thank You!!!</p><br>
-   
-    <img src="images/BrunetteMale.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-text-black w3-margin-right">Rhys Schell</span> Service Manager Partnership & Engagement</p>
-    <p>Thank you Kiersty. A big, big, thank you for all the amazing work you have done on this [Power BI Dashboard]. We are incredibly grateful and this will be such a valuable tool for the team going forwards. </p><br>
-    
-    <img src="images/BlondeThumbsUp.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-text-black w3-margin-right">Shell Corden</span> Insight Analyst</p>
-    <p>Thank you for your help today with a Power Query Q I had been mulling over! The way you worked through the problem and helped explain the solution was easy to understand and will be reapply-able! Will be sure to add it to our notes area as I think it will definitely have multi use for us. Thank you!!!!!</p><br>
-    
-    <!-- Grid for pricing tables -->
-    <h3 class="w3-padding-16">My Price</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">5GB Storage</li>
-          <li class="w3-padding-16">Mail Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-half">
-        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
-          <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">50GB Storage</li>
-          <li class="w3-padding-16">Endless Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-    <!-- End Grid/Pricing tables -->
-    </div>
-    
-  <!-- End About Section -->
-  </div>
-
-  <!-- Contact Section -->
-  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
-    <h2>Contact Me</h2>
-    <hr class="w3-opacity">
-
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
-    </div>
-    
-    <!-- Image of location/map -->
-    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
-   
-    <p>Lets get in touch. Send me a message:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-  <!-- End Contact Section -->
-  </div>  
-  
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-  <!-- End footer -->
-  </footer>
-  
-<!-- END PAGE CONTENT -->
-</div>
-
-<script>
-// Open and close sidebar
-function openNav() {
-  document.getElementById("mySidebar").style.width = "70%";
-  document.getElementById("mySidebar").style.display = "block";
-}
-
-function closeNav() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-</script>
-
-</body>
-</html>
+    <button class
