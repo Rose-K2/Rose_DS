@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
+<title>Data Science "Bared"</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,7 +14,7 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('images/BearSideBar.png');
+  background-image: url('images/BearSideBar.png'); /* Ensure this path is correct */
   min-height: 100%;
 }
 @media only screen and (max-width: 600px) {
@@ -34,45 +34,57 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
   .top-bar {
     display: none;
   }
+  .w3-sidebar {
+    width: 30%;
+  }
+}
+.main-content {
+  margin-left: 30%; /* Reserve space for sidebar */
+  padding-top: 60px; /* Padding for fixed navigation */
+}
+.section {
+  display: none; /* Hide all sections by default */
 }
 </style>
 </head>
 <body>
 
+<!-- Sidebar with Bear Image -->
+<div class="w3-sidebar w3-hide-medium w3-hide-small">
+  <div class="bgimg"></div>
+</div>
+
 <!-- Top Navigation Bar -->
 <div class="w3-top w3-white w3-large">
   <div class="w3-bar w3-white w3-card w3-left-align w3-large">
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Me</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small w3-hover-white">My Portfolio</a>
-    <a href="#feedback" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Feedback and Appreciation</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact Me</a>
+    <a href="javascript:void(0)" onclick="showSection('about')" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Me</a>
+    <a href="javascript:void(0)" onclick="showSection('portfolio')" class="w3-bar-item w3-button w3-hide-small w3-hover-white">My Portfolio</a>
+    <a href="javascript:void(0)" onclick="showSection('feedback')" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Feedback and Appreciation</a>
+    <a href="javascript:void(0)" onclick="showSection('contact')" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact Me</a>
   </div>
 </div>
 
 <!-- Page Content -->
-<div class="w3-main w3-padding-large" style="margin-left:30%; padding-top: 60px;">
+<div class="main-content w3-padding-large">
 
   <!-- About Section (Landing Page) -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+  <div class="section" id="about">
     <h2>About Me</h2>
     <hr class="w3-opacity">
-    <p>With 18 years of experience in finance and analytical roles within local government and the police force, I have developed strong skills in data analysis and insights. Currently, I work as an Insight Analyst for a local authority, primarily using Power BI, and I am also learning Python. I have experience with geographical analysis tools like ArcGIS, which complements my work in data science and analytics. To further enhance my knowledge, I am pursuing a BSc in Data Science.
-    <br>
-    <p>On a personal note, I am married with two wonderful children. I have a deep admiration for bears, finding them both gorgeous and fascinating, however I have yet to embark on a bear related data-science project! My interests extend to fitness, competing, general wellness, healthy eating, and yoga—though I admit, avoiding cakes and chocolate is a challenge that I frequently fail on!
-    <br>
-    <p>Maths and statistics are my true passions, and I find immense joy in my work. I am enthusiastic about continuously learning and growing in my profession while balancing a fulfilling personal life.
-    </p>
+    <p>With 18 years of experience in finance and analytical roles within local government and the police force, I have developed strong skills in data analysis and insights. Currently, I work as an Insight Analyst for a local authority, primarily using Power BI, and I am also learning Python. I have experience with geographical analysis tools like ArcGIS, which complements my work in data science and analytics. To further enhance my knowledge, I am pursuing a BSc in Data Science.</p>
+    <p>On a personal note, I am married with two wonderful children. I have a deep admiration for bears, finding them both gorgeous and fascinating, however I have yet to embark on a bear related data-science project! My interests extend to fitness, competing, general wellness, healthy eating, and yoga—though I admit, avoiding cakes and chocolate is a challenge that I frequently fail on!</p>
+    <p>Maths and statistics are my true passions, and I find immense joy in my work. I am enthusiastic about continuously learning and growing in my profession while balancing a fulfilling personal life.</p>
   </div>
 
   <!-- Portfolio Section -->
-  <div class="w3-padding-32 w3-content" id="portfolio">
+  <div class="section" id="portfolio">
     <h2 class="w3-text-grey">My Portfolio</h2>
     <hr class="w3-opacity">
     <!-- Content will go here -->
   </div>
 
   <!-- Feedback and Appreciation Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="feedback">
+  <div class="section" id="feedback">
     <h2>Feedback and Appreciation</h2>
     <hr class="w3-opacity">
     <img src="images/BlondeFemale.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:50px">
@@ -89,7 +101,7 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
   </div>
 
   <!-- Contact Section -->
-  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+  <div class="section" id="contact">
     <h2>Contact Me</h2>
     <hr class="w3-opacity">
     <div class="w3-section">
@@ -112,14 +124,19 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
 </div>
 
 <script>
-// Script to open and close sidebar
-function openNav() {
-  document.getElementById("mySidebar").style.display = "block";
+// Function to show the selected section and hide others
+function showSection(sectionId) {
+  var sections = document.getElementsByClassName("section");
+  for (var i = 0; i < sections.length; i++) {
+    sections[i].style.display = "none"; // Hide all sections
+  }
+  document.getElementById(sectionId).style.display = "block"; // Show selected section
 }
 
-function closeNav() {
-  document.getElementById("mySidebar").style.display = "none";
-}
+// Show the "About" section by default when the page loads
+window.onload = function() {
+  showSection('about');
+};
 </script>
 
 </body>
