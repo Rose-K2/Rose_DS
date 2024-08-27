@@ -39,72 +39,22 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
 </head>
 <body>
 
-<!-- Sidebar with image for larger screens -->
-<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:30%">
-  <div class="bgimg"></div>
-</nav>
-
-<!-- Top bar with image for mobile screens -->
-<div class="top-bar w3-hide-large">
-  <div class="bgimg"></div>
+<!-- Top Navigation Bar -->
+<div class="w3-top w3-white w3-large">
+  <div class="w3-bar w3-white w3-card w3-left-align w3-large">
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Me</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small w3-hover-white">My Portfolio</a>
+    <a href="#feedback" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Feedback and Appreciation</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact Me</a>
+  </div>
 </div>
 
-<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
-    <i class="fa fa-remove"></i>
-  </a>
-  <div class="w3-bar-block w3-center">
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
-    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
-  </div>
-</nav>
-
 <!-- Page Content -->
-<div class="w3-main w3-padding-large" style="margin-left:30%">
+<div class="w3-main w3-padding-large" style="margin-left:30%; padding-top: 60px;">
 
-  <!-- Menu icon to open sidebar -->
-  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black w3-hide-large" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
-
-  <!-- Header -->
-  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
-    <h1 class="w3-jumbo"><b>Data Science "Bared"</b></h1>
-    <p>Senior Business Insight Analyst & Data Science Student.</p>
-    <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:70%;margin:auto;">
-    <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
-    
-      <i class="fa fa-download"></i> Download Resume
-    </button>
-  </header>
-
-  <!-- Portfolio Section -->
-  <div class="w3-padding-32 w3-content" id="portfolio">
-    <h2 class="w3-text-grey">My Portfolio</h2>
-    <hr class="w3-opacity">
-
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="/w3images/wedding.jpg" style="width:100%">
-        <img src="/w3images/rocks.jpg" style="width:100%">
-        <img src="/w3images/sailboat.jpg" style="width:100%">
-      </div>
-
-      <div class="w3-half">
-        <img src="/w3images/underwater.jpg" style="width:100%">
-        <img src="/w3images/chef.jpg" style="width:100%">
-        <img src="/w3images/wedding.jpg" style="width:100%">
-        <img src="/w3images/p6.jpg" style="width:100%">
-      </div>
-    <!-- End photo grid -->
-    </div>
-  <!-- End Portfolio Section -->
-    </div>
-  <!-- About Section -->
+  <!-- About Section (Landing Page) -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
-    <h2>About</h2>
+    <h2>About Me</h2>
     <hr class="w3-opacity">
     <p>With 18 years of experience in finance and analytical roles within local government and the police force, I have developed strong skills in data analysis and insights. Currently, I work as an Insight Analyst for a local authority, primarily using Power BI, and I am also learning Python. I have experience with geographical analysis tools like ArcGIS, which complements my work in data science and analytics. To further enhance my knowledge, I am pursuing a BSc in Data Science.
     <br>
@@ -112,52 +62,65 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
     <br>
     <p>Maths and statistics are my true passions, and I find immense joy in my work. I am enthusiastic about continuously learning and growing in my profession while balancing a fulfilling personal life.
     </p>
-    
-<!-- Testimonials -->
-<h3 class="w3-padding-24">Feedback and Appreciation</h3>
-<img src="images/BlondeFemale.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:50px">
-<p><span class="w3-large w3-text-black w3-margin-right">Hayley </span> Public Health Consultant</p>
-<p>I just wanted to acknowledge your work on the Boater Survey.  The PH team have really enjoyed working with you, bringing to life the numbers, to produce an amazing PowerBI tool to showcase and present the results.  It truly is an awesome product and will go some way to further raise awareness about this seldom heard community and get conversations started. Your professional approach, coupled with enthusiasm and a thirst to want to know more have ensured this product is authentic!  Thank You!!!</p><br>
-
-<img src="images/BrunetteMale.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:50px">
-<p><span class="w3-large w3-text-black w3-margin-right">Rhys </span> Service Manager Partnership & Engagement</p>
-<p>Thank you Kiersty. A big, big, thank you for all the amazing work you have done on this [Power BI Dashboard]. We are incredibly grateful and this will be such a valuable tool for the team going forwards. </p><br>
-
-<img src="images/BlondeThumbsUp.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:50px">
-<p><span class="w3-large w3-text-black w3-margin-right">Shell </span> Insight Analyst</p>
-<p>Thank you for your help today with a Power Query Q I had been mulling over! The way you worked through the problem and helped explain the solution was easy to understand and will be reapply-able! Will be sure to add it to our notes area as I think it will definitely have multi use for us. Thank you!!!!!</p><br>
-
-
-<div class="w3-row-padding" style="margin:0 -16px">
-  
-
-  
-<!-- End Grid/Pricing tables -->    
-</div>
-  <!-- End About Section -->
   </div>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    <h2 class="w3-text-grey">My Portfolio</h2>
+    <hr class="w3-opacity">
+    <!-- Content will go here -->
+  </div>
+
+  <!-- Feedback and Appreciation Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="feedback">
+    <h2>Feedback and Appreciation</h2>
+    <hr class="w3-opacity">
+    <img src="images/BlondeFemale.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:50px">
+    <p><span class="w3-large w3-text-black w3-margin-right">Hayley </span> Public Health Consultant</p>
+    <p>I just wanted to acknowledge your work on the Boater Survey...</p><br>
+
+    <img src="images/BrunetteMale.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:50px">
+    <p><span class="w3-large w3-text-black w3-margin-right">Rhys </span> Service Manager Partnership & Engagement</p>
+    <p>Thank you Kiersty. A big, big, thank you for all the amazing work...</p><br>
+
+    <img src="images/BlondeThumbsUp.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:50px">
+    <p><span class="w3-large w3-text-black w3-margin-right">Shell </span> Insight Analyst</p>
+    <p>Thank you for your help today with a Power Query Q I had been mulling over!...</p><br>
+  </div>
+
   <!-- Contact Section -->
-<!-- Contact Section -->
   <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
     <h2>Contact Me</h2>
     <hr class="w3-opacity">
-
-
-<!-- Image of location/map -->
-
     <div class="w3-section">
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Wiltshire, UK</p>
-          </div>
+    </div>
+    <p>Lets get in touch. Send me a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  </div>
 
-<p>Lets get in touch. Send me a message:</p>
-<form action="/action_page.php" target="_blank">
-  <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-  <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-  <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-  <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-  <p>
-    <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-      <i class="fa fa-paper-plane"></i> SEND MESSAGE
-    </button>
-  </p>
-</form>
+</div>
+
+<script>
+// Script to open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
