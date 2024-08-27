@@ -78,7 +78,7 @@ body, h1, h2, h3, h4, h5, h6 {
   position: fixed;
   width: 50px;
   height: 50px;
-  background-image: url('images/BearIcon.png'); /* Path to mini bear image */
+  background-image: url('images/bear-icon.png'); /* Ensure this path is correct */
   background-size: cover;
   z-index: 1;
   animation: float linear infinite;
@@ -162,49 +162,4 @@ body, h1, h2, h3, h4, h5, h6 {
     <div class="w3-section">
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Wiltshire, UK</p>
     </div>
-    <p>Lets get in touch. Send me a message:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-  </div>
-
-</div>
-
-<script>
-// Function to show the selected section and hide others
-function showSection(sectionId) {
-  var sections = document.getElementsByClassName("section");
-  for (var i = 0; i < sections.length; i++) {
-    sections[i].style.display = "none"; // Hide all sections
-  }
-  document.getElementById(sectionId).style.display = "block"; // Show selected section
-}
-
-// Show the "About" section by default when the page loads
-window.onload = function() {
-  showSection('about');
-  createFloatingBears();
-};
-
-// Function to create floating bear elements
-function createFloatingBears() {
-  for (var i = 0; i < 10; i++) { // Creates 10 bears
-    var bear = document.createElement('div');
-    bear.className = 'floating-bear';
-    bear.style.left = Math.random() * window.innerWidth + 'px'; // Random horizontal position
-    bear.style.animationDuration = (5 + Math.random() * 10) + 's'; // Random animation duration
-    document.body.appendChild(bear);
-  }
-}
-</script>
-
-</body>
-</html>
+    <p>Lets get in touch. Send me
