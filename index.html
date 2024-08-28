@@ -67,18 +67,6 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
   display: block;
   vertical-align: middle;
 }
-
-/* Floating Bear Background */
-.floating-bear {
-  position: absolute;
-  width: 30px; /* Smaller bear size */
-  height: 30px;
-  background-image: url('images/BearIcon.png'); /* Use the same bear icon */
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.5; /* Slightly transparent */
-  animation-timing-function: ease-in-out; /* Smooth movement */
-}
 </style>
 </head>
 <body>
@@ -108,9 +96,6 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
       </a>
     </p>
 </header>
-
-<!-- Floating Bears Background -->
-<div id="floating-bears"></div>
 
 <!-- Page Content -->
 <div class="main-content w3-padding-large">
@@ -197,58 +182,7 @@ function showSection(sectionId) {
 // Show the "About" section by default when the page loads
 window.onload = function() {
   showSection('about');
-  createFloatingBears(); // Call the function to create floating bears
 };
-
-// Function to create floating bears
-function createFloatingBears() {
-  var floatingBearsContainer = document.getElementById('floating-bears');
-  
-  // Create 20 floating bear elements
-  for (var i = 0; i < 20; i++) {
-    var bear = document.createElement('div');
-    bear.className = 'floating-bear';
-    
-    // Randomize starting position
-    bear.style.top = Math.random() * window.innerHeight + 'px';
-    bear.style.left = Math.random() * window.innerWidth + 'px';
-
-    // Generate a random animation duration between 4s and 8s
-    var animationDuration = Math.random() * 4 + 4 + 's';
-    
-    // Apply the random animation duration
-    bear.style.animationDuration = animationDuration;
-    
-    // Generate random keyframes for more varied motion
-    var keyframes = generateRandomKeyframes();
-    bear.style.animationName = keyframes;
-
-    floatingBearsContainer.appendChild(bear);
-  }
-}
-
-// Function to generate unique keyframes for each bear
-function generateRandomKeyframes() {
-  var styleSheet = document.styleSheets[0];
-  var keyframeName = 'float' + Math.floor(Math.random() * 10000);
-  
-  var randomX1 = Math.random() * 100 - 50;
-  var randomY1 = Math.random() * 100 - 50;
-  var randomX2 = Math.random() * 100 - 50;
-  var randomY2 = Math.random() * 100 - 50;
-  
-  var keyframes =
-    `@keyframes ${keyframeName} {
-      0% { transform: translate(0px, 0px); }
-      25% { transform: translate(${randomX1}px, ${randomY1}px); }
-      50% { transform: translate(${randomX2}px, ${randomY2}px); }
-      75% { transform: translate(${randomX1}px, ${randomY1}px); }
-      100% { transform: translate(0px, 0px); }
-    }`;
-    
-  styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
-  return keyframeName;
-}
 </script>
 
 </body>
