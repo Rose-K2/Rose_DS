@@ -67,6 +67,28 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
   display: block;
   vertical-align: middle;
 }
+
+/* Floating Bear Background */
+.floating-bear {
+  position: absolute;
+  width: 30px; /* Smaller bear size */
+  height: 30px;
+  background-image: url('images/BearIcon.png'); /* Use the same bear icon */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5; /* Slightly transparent */
+  animation: float 8s infinite ease-in-out;
+}
+
+/* Keyframes for floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(20px);
+  }
+}
 </style>
 </head>
 <body>
@@ -96,6 +118,9 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
       </a>
     </p>
 </header>
+
+<!-- Floating Bears Background -->
+<div id="floating-bears"></div>
 
 <!-- Page Content -->
 <div class="main-content w3-padding-large">
@@ -182,7 +207,25 @@ function showSection(sectionId) {
 // Show the "About" section by default when the page loads
 window.onload = function() {
   showSection('about');
+  createFloatingBears(); // Call the function to create floating bears
 };
+
+// Function to create floating bears
+function createFloatingBears() {
+  var floatingBearsContainer = document.getElementById('floating-bears');
+  
+  // Create 10 floating bear elements
+  for (var i = 0; i < 10; i++) {
+    var bear = document.createElement('div');
+    bear.className = 'floating-bear';
+    
+    // Randomize starting position
+    bear.style.top = Math.random() * window.innerHeight + 'px';
+    bear.style.left = Math.random() * window.innerWidth + 'px';
+    
+    floatingBearsContainer.appendChild(bear);
+  }
+}
 </script>
 
 </body>
