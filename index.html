@@ -53,6 +53,20 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
 .section {
   display: none; /* Hide all sections by default */
 }
+.bear-icon-container {
+  padding: 0;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: lightgrey; /* Ensures the background color is visible */
+}
+.bear-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Makes sure the image fits within the container without being distorted */
+  display: block;
+  vertical-align: middle;
+}
 </style>
 </head>
 <body>
@@ -76,14 +90,12 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
 <header class="w3-container w3-center" style="padding:128px 16px; margin-left:30%;" id="home">
     <h1 class="w3-jumbo"><b>Data Science "Bared"</b></h1>
     <p>Senior Business Insight Analyst & Data Science Student.</p>
-<p>
-  <a href="#" class="w3-button w3-light-grey w3-padding-large" style="padding: 0; display: inline-block; width: 50px; height: 50px;">
-    <img src="images/BearIcon.png" alt="Bear Icon" style="width: 100%; height: 100%; object-fit: contain; display: block; vertical-align: middle;">
-  </a>
-</p>
-
+    <p>
+      <a href="#" class="w3-button bear-icon-container">
+        <img src="images/BearIcon.png" alt="Bear Icon" class="bear-icon">
+      </a>
+    </p>
 </header>
-
 
 <!-- Page Content -->
 <div class="main-content w3-padding-large">
@@ -103,12 +115,11 @@ body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
     <hr class="w3-opacity">
     <a href="https://github.com/Rose-K2/Hyrox" target="_blank" rel="noopener noreferrer">
       <img src="images/Hyrox.png" alt="Hyrox" class="w3-left w3-margin-right" style="width:200px; height:150px;">
-
     </a>
     
 <p>Hyrox is growing fast, but research around what contributes to success in these races is still limited. My curiosity led me to analyse the performance data of these incredible athletes to uncover what key factors contribute to achieving those impressive sub-one-hour finishes. <p/>
 <p>Additionally, I aimed to identify which variables can be used to predict a participant's finish time more accurately.</>
-<p> <Strong>Click the Hyrox icon on the left</Strong> to begin exploring the analysis and discover the secrets behind Hyrox's top competitors.<p/>
+<p> <strong>Click the Hyrox icon on the left</strong> to begin exploring the analysis and discover the secrets behind Hyrox's top competitors.<p/>
 <p>This analysis is completed on male finishers, competing in the Pro category.</p>
   </div>
 
